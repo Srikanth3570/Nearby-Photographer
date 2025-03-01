@@ -1,0 +1,68 @@
+/* Center the login card */
+.login-container {
+  max-width: 900px; /* Reduce width for better mobile UX */
+  background: transparent; /* Remove white background */
+  border-radius: 12px;
+  box-shadow: none;
+  padding: 50px;
+}
+
+/* Remove extra padding/margins */
+.login-container .login-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Form Section */
+.login-form {
+  background: rgba(75, 73, 73, 0.1); /* Light transparent background */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Input Fields */
+.form-control {
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/* Sign-in Button */
+.btn-primary {
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 10px;
+}
+
+/* OR Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+}
+
+.divider p {
+  padding: 0 10px;
+  font-weight: bold;
+  color: #ddd;
+}
+
+/* RESPONSIVE FIXES */
+@media (max-width: 768px) {
+  .login-container {
+      max-width: 100%;
+  }
+  
+  .login-form {
+      background: rgba(255, 255, 255, 0.15); /* Light background on mobile */
+      padding: 15px;
+  }
+}
