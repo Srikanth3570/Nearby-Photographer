@@ -25,12 +25,6 @@ header {
   /* z-index: 1000; */
 }
 
-/* Push content below header */
-main {
-  margin-top: 50px; /* Adjust based on header height */
-  /* padding: 10px; */
-}
-
 /* Navbar styles */
 nav {
   display: flex;

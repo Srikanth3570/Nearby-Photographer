@@ -1,8 +1,11 @@
 import React from "react";
-import "./login.css"; // Import CSS
-import Img from "../components/images/login.svg";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
+import "./login.css";
+import Img from "../assests/login.svg";
 
 function Login() {
+  const navigate = useNavigate(); // Hook for navigation
+
   return (
     <section 
       className="d-flex justify-content-center align-items-center vh-100" 
@@ -20,12 +23,12 @@ function Login() {
             <form>
               {/* Email Input */}
               <div className="form-outline mb-3">
-                <input type="email" className="form-control" placeholder="Email address" />
+                <input type="email" className="form-control" placeholder="Email address"  required/>
               </div>
 
               {/* Password Input */}
               <div className="form-outline mb-3">
-                <input type="password" className="form-control" placeholder="Password" />
+                <input type="password" className="form-control" placeholder="Password"  required/>
               </div>
 
               {/* Remember Me & Forgot Password */}
@@ -50,7 +53,12 @@ function Login() {
               </div>
 
               {/* Sign Up Button */}
-              <button type="submit" className="btn w-100" style={{ backgroundColor: "#28a745", color: "#fff" }}>
+              <button 
+                type="button" 
+                className="btn w-100" 
+                style={{ backgroundColor: "#28a745", color: "#fff" }}
+                onClick={() => navigate("/")} // Navigate to Signup
+              >
                 Sign Up
               </button>
             </form>
