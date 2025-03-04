@@ -57,7 +57,7 @@ function Login() {
                 type="button" 
                 className="btn w-100" 
                 style={{ backgroundColor: "#28a745", color: "#fff" }}
-                onClick={() => navigate("/")} // Navigate to Signup
+                onClick={() => navigate("/signup")} // Navigate to Signup
               >
                 Sign Up
               </button>

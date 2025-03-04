@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./header.css";
-import Img from "../images/cameralogo.png";
+import Img from "../../assests/cameralogo.png";
 
-const headerbackground={
-  backgroundColor:"#212A31",
-  color:"white"
-}
+const headerbackground = {
+  backgroundColor: "#212A31",
+  color: "white",
+};
 
 function Header() {
   const [location, setLocation] = useState("Detecting...");
@@ -48,13 +48,13 @@ function Header() {
   }, []);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light  fixed-top shadow-sm" style={headerbackground} >
-      <div className="container-fluid d-flex align-items-center justify-content-between">
+    <nav className="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" style={headerbackground}>
+      <div className="container-fluid d-flex align-items-center">
 
         {/* Left-side Logo and Location */}
         <div className="d-flex align-items-center">
-          <img src={Img} alt="Logo" style={{ height: "60px", marginRight: "15px",borderRadius:"50%" }} />
-          <span className="fw-bold" style={{ fontSize: "13px" }}>{location}</span>
+          <img src={Img} alt="Logo" style={{ height: "60px", borderRadius: "50%", marginRight: "20px" }} />
+          <span className="fw-bold" style={{ fontSize: "14px", marginLeft: "10px" }}>{location}</span>
         </div>
 
         {/* Toggle button for mobile */}
@@ -67,20 +67,20 @@ function Header() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Navbar Items */}
-        <div className="collapse navbar-collapse justify-content-center" id="navbarNav" >
-          <ul className="navbar-nav" >
+        {/* Navbar Items - Moved to Right */}
+        <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active fs-6" href="/">Home</a>
+              <a className="nav-link active fs-6 mx-2" href="/">Home</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link fs-6" href="/">Features</a>
+              <a className="nav-link fs-6 mx-2" href="/">Features</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link fs-6" href="/">Pricing</a>
+              <a className="nav-link fs-6 mx-2" href="/">Pricing</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link fs-6" href="/">About</a>
+              <a className="nav-link fs-6 mx-2" href="/">About</a>
             </li>
           </ul>
         </div>
@@ -90,5 +90,3 @@ function Header() {
 }
 
 export default Header;
-
-
