@@ -8,7 +8,7 @@ import Footer from "./components/footer/footer";
 
 function AppContent() {
   const location = useLocation(); // Get the current route
-  const showHeaderFooter = location.pathname !== "/Signup" && location.pathname !== "/login";
+  const showHeaderFooter = location.pathname !== "/signup" && location.pathname !== "/login";
 
   return (
     <>
@@ -16,7 +16,7 @@ function AppContent() {
       
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Signup" element={<Signup />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
       </Routes>
 

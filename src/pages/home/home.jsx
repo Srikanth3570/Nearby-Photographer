@@ -22,7 +22,7 @@ function Home() {
             Your browser does not support the video tag.
           </video>
 
-      <div className="col-md-5 p-lg-5 mx-auto my-5">
+      <div >
         <h1 className="display-4 font-weight-normal matter">Nearby Photographer</h1>
         <p className="lead font-weight-normal paragraph">
           Find and hire photographers near you easily!
@@ -30,7 +30,7 @@ function Home() {
       </div>
 
       {/* Buttons for Login and Signup */}
-      <div className="d-flex justify-content-center mt-3">
+      <div className="d-flex justify-content-center home-buttons">
         <a className="btn btn-primary mx-2 home-buttons-login" href="/login">
           Login
         </a>
